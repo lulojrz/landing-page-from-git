@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/690a9ad192.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
@@ -50,59 +51,44 @@
             </div>
           </nav>
     </header>
+    
     <section id="banner">
         <img src="https://sillaoficina365.es/modules/dbblog/views/img/post/199-crea-tu-setup-gamer-perfecto-para-jugar-y-estudiar.webp"
             alt="">
     </section>
+  <button class="car" id="carrito-btn">
+  <i class="fa-solid fa-cart-shopping icon" style="color: #ffffff;"></i>
+  </button>
+   <section class="modal-per" id="modal-per">
+     <div data-bs-theme="dark" style= "background-color:black">
+  <button type="button" class="btn-close" aria-label="Close" id="close"></button>
+
+</div>
+     <table class="table" id="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Producto</th>
+      <th scope="col">Precio </th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Total</th>
+      <th scope="col">-</th>
+      
+    </tr>
+  </thead>
+  <tbody id="body-table">
+   
+  </tbody>
+</table>
+     
+  </section>
+  
+  
     <main>
         <section id="productos">
             <h1>Nuestros Productos</h1>
-            <div class="container-cards">
-                <div class="card">
-                    <div class="card-top">
-                        <img src="https://m.media-amazon.com/images/I/41m8hUyCaML._SL500_.jpg" alt="">
-
-                    </div>
-                    <div class="card-bottom">
-                        <h1 id="product-name">
-                            Auriculares Gamer
-                        </h1>
-                        <h3 id="price">$50.0000</h3>
-                        <button class="btn-card">Ver Mas</button>
-
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-top">
-                        <img src="https://arsonyb2c.vtexassets.com/arquivos/ids/348023-800-800?v=637363644415730000&width=800&height=800&aspect=true"
-                            alt="">
-
-                    </div>
-
-                    <div class="card-bottom">
-                        <h1 id="product-name">
-                            Joystick PS5
-                        </h1>
-                        <h3 id="price">$90.0000</h3>
-                        <button class="btn-card">Ver Mas</button>
-
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-top">
-                        <img src="https://spacegamer.com.ar/img/Public/1058-producto-impact-8051.jpg" alt="">
-
-                    </div>
-
-                    <div class="card-bottom">
-                        <h1 id="product-name">
-                            Mouse Gamer
-                        </h1>
-                        <h3 id="price">$30.0000</h3>
-                        <button class="btn-card">Ver Mas</button>
-
-                    </div>
-                </div>
+            <div class="container-cards" id = "container">
+               
             </div>
 
         </section>
@@ -206,19 +192,20 @@
             <div class="form-container">
                 <form action="https://formspree.io/f/mgveavjr" method="post">
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control req" id="name" aria-describedby="emailHelp"
                             name="exampleInputEmail1" required>
+                         
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleInputPassword1" name="exampleInputPassword1"
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control req" id="email" name="exampleInputPassword1"
                             required>
                     </div>
                     <div class="mb-3">
-                        <label for="floatingTextarea">Mensaje</label>
+                        <label for="mensaje">Mensaje</label>
 
-                        <textarea class="form-control" id="floatingTextarea" name="floatingTextarea" rows="5"
+                        <textarea class="form-control" id="mensaje" name="floatingTextarea" rows="5"
                             required></textarea>
                     </div>
 
@@ -226,8 +213,9 @@
                 </form>
             </div>
         </section>
+    
     </main>
-
+<script src="script.js"></script>
 </body>
 
 </html>

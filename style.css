@@ -255,6 +255,36 @@ form{
     flex-direction: column;
     padding: 1rem;
 }
+.active{
+    
+  text-align:center;
+}
+.no-active{
+  display:none;
+}
+.car{
+  height:70px;
+  background-color:blue;
+  width:70px;
+  border-radius:100%;
+  border:1px solid white;
+  position:fixed;
+  z-index:1;
+  top:350px;
+  
+}
+.modal-per{
+  top:200px;
+  left:100px;
+  position:fixed;
+  z-index:1;
+  display:none;
+  border:1px solid black;
+  border-radius:10px;
+  
+}
+
+
 
 
 @media(max-width: 610px) {
