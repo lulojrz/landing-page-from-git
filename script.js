@@ -37,7 +37,7 @@ productos.map((x) => {
     <img src="${x.img}" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">${x.nombre}</h5>
-      <p class="card-text">Precio : 
+      <p class="card-text">Precio : $ 
       ${x.precio}</p>
       <button  class="btn btn-primary" id=${x.id} >Agregar </button>
       <button  class="btn btn-warning info" id=${x.id} >+Info </button>
@@ -134,10 +134,10 @@ function actualizarCarrito() {
 
                 `
     <tr>
-        <td scope="row" colspan="2">${x.nombre}</td>
-        <td  colspan="2" >${x.precio}</td>
+        <td scope="row" colspan="1">${x.nombre}</td>
+        <td  colspan="2" >$ ${x.precio}</td>
         <td  colspan="2">${x.cantidad}</td>
-        <td  colspan="2">${x.total}</td>
+        <td  colspan="2">$ ${x.total}</td>
        <td  colspan="2"> <button  class="btn btn-danger btn-sm delete" id=${x.id}>X</button> </td>
  </tr>
     
