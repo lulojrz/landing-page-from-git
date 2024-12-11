@@ -134,13 +134,12 @@ function actualizarCarrito() {
 
                 `
     <tr>
-        <th scope="row">${x.id}</th>
-        <td>${x.nombre}</td>
-        <td>${x.precio}</td>
-        <td>${x.cantidad}</td>
-        <td>${x.total}</td>
-       <td> <button  class="btn btn-danger delete" id=${x.id}>X</button></td>
-      </tr>
+        <td scope="row" colspan="2">${x.nombre}</td>
+        <td  colspan="2" >${x.precio}</td>
+        <td  colspan="2">${x.cantidad}</td>
+        <td  colspan="2">${x.total}</td>
+       <td  colspan="2"> <button  class="btn btn-danger btn-sm delete" id=${x.id}>X</button> </td>
+ </tr>
     
     `
 

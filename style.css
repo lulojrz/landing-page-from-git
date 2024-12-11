@@ -264,13 +264,13 @@ form{
 }
 .car{
   height:70px;
-  background-color:blue;
+  background-color:rgb(0, 81, 255);
   width:70px;
   border-radius:100%;
   border:1px solid white;
   position:fixed;
   z-index:1;
-  top:350px;
+  top:500px;
   
 }
 .modal-per{
@@ -280,10 +280,18 @@ form{
   z-index:1;
   display:none;
   border:1px solid black;
-  border-radius:10px;
+
   
 }
-
+table{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+}
+tr{
+    width: 100%;
+}
 
 
 

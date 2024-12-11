@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/690a9ad192.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/690a9ad192.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
@@ -31,64 +31,69 @@
     <header>
         <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#banner">Inicio</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#productos">Productos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#resenas">Reseñas</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#contacto" >Contacto</a>
-                  </li>
-                </ul>
-              </div>
+                <a class="navbar-brand" href="#banner">Inicio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#productos">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#resenas">Reseñas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </nav>
+        </nav>
     </header>
-    
+
     <section id="banner">
         <img src="https://sillaoficina365.es/modules/dbblog/views/img/post/199-crea-tu-setup-gamer-perfecto-para-jugar-y-estudiar.webp"
             alt="">
     </section>
-  <button class="car" id="carrito-btn">
-  <i class="fa-solid fa-cart-shopping icon" style="color: #ffffff;"></i>
-  </button>
-   <section class="modal-per" id="modal-per">
-     <div data-bs-theme="dark" style= "background-color:black">
-  <button type="button" class="btn-close" aria-label="Close" id="close"></button>
+    <button class="car" id="carrito-btn">
+        <i class="fa-solid fa-cart-shopping icon" style="color: #ffffff;"></i>
+    </button>
+    <section class="modal-per" id="modal-per">
+        <div data-bs-theme="dark" style="background-color:black">
+            <button type="button" class="btn-close" aria-label="Close" id="close"></button>
 
-</div>
-     <table class="table" id="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Producto</th>
-      <th scope="col">Precio </th>
-      <th scope="col">Cantidad</th>
-      <th scope="col">Total</th>
-      <th scope="col">-</th>
-      
-    </tr>
-  </thead>
-  <tbody id="body-table">
-   
-  </tbody>
-</table>
-     
-  </section>
-  
-  
+        </div>
+        <table class="table" id="table">
+            <thead>
+                <tr>
+                    <th scope="col" colspan="2">Producto</th>
+                    <th scope="col" colspan="2" >Precio </th>
+                    <th scope="col" colspan="2" >Cantidad</th>
+                    <th scope="col" colspan="2" >Total</th>
+                    <th scope="col" colspan="2">A</th>
+
+                </tr>
+
+            </thead>
+            <tbody id="body-table">
+
+            </tbody>
+            <!--   <tfoot>
+                <button type="button" class="btn btn-primary" id="save">Guardar</button>
+
+            </tfoot>-->
+        </table>
+
+    </section>
+
+
     <main>
         <section id="productos">
             <h1>Nuestros Productos</h1>
-            <div class="container-cards" id = "container">
-               
+            <div class="container-cards" id="container">
+
             </div>
 
         </section>
@@ -195,12 +200,11 @@
                         <label for="name" class="form-label">Nombre</label>
                         <input type="text" class="form-control req" id="name" aria-describedby="emailHelp"
                             name="exampleInputEmail1" required>
-                         
+
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control req" id="email" name="exampleInputPassword1"
-                            required>
+                        <input type="email" class="form-control req" id="email" name="exampleInputPassword1" required>
                     </div>
                     <div class="mb-3">
                         <label for="mensaje">Mensaje</label>
@@ -213,9 +217,9 @@
                 </form>
             </div>
         </section>
-    
+
     </main>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
