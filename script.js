@@ -29,6 +29,7 @@ const container = document.getElementById("container")
 
 
 
+
 container.innerHTML = ""
 productos.map((x) => {
     container.innerHTML +=
@@ -201,3 +202,28 @@ botonesEliminar.forEach(element => {
         actualizarCarrito();
     });
 });
+
+
+
+const url = "https://jsonplaceholder.typicode.com/users";
+
+document.addEventListener("DOMContentLoaded", llamarAPI);
+
+function llamarAPI(){
+    fetch(url)
+    .then(resp=> resp.json())
+    .then(data => mostrarfetch(data))
+}
+function mostrarfetch(data){
+    const comentarios = ["LOS MEJORES AURICULARES !!!!!","LOS PIBES QUE ATIENDEN SON RE BUENA ONDA","Compre solo una vez, pero no me arrepiento",
+        "Tienen un monton de variedad de productos","Nunca se demoran con la entrega","Para los gordos compus es el paraiso"
+      ]
+    console.log(data)
+    for (i= 0;i <= 5;i++) {
+        const producto = data[i];
+        console.log(producto)
+    }
+
+
+}
+
