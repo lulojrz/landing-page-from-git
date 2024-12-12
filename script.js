@@ -214,14 +214,34 @@ function llamarAPI(){
     .then(resp=> resp.json())
     .then(data => mostrarfetch(data))
 }
+
+const grid = document.getElementById("grid-container")
 function mostrarfetch(data){
     const comentarios = ["LOS MEJORES AURICULARES !!!!!","LOS PIBES QUE ATIENDEN SON RE BUENA ONDA","Compre solo una vez, pero no me arrepiento",
         "Tienen un monton de variedad de productos","Nunca se demoran con la entrega","Para los gordos compus es el paraiso"
       ]
-    console.log(data)
+   
     for (i= 0;i <= 5;i++) {
-        const producto = data[i];
-        console.log(producto)
+        grid.innerHTML +=
+        `
+         <div class="grid-item">
+                    <div class="top-item">
+                        <img src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg"
+                            alt="">
+                        <span>${data[i].name}</span>
+                    </div>
+                    <div class="opinion">
+                        <h3>
+                            ${comentarios[i]}
+                        </h3>
+                    </div>
+
+
+                </div>
+
+        `
+
+        
     }
 
 
