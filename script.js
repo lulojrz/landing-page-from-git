@@ -33,6 +33,7 @@ const container = document.getElementById("container")
 container.innerHTML = ""
 productos.map((x) => {
     container.innerHTML +=
+    
         `
     <div class="card" style="width: 18rem;" key= ${x.id}>
     <img src="${x.img}" class="card-img-top" alt="...">
@@ -51,8 +52,9 @@ productos.map((x) => {
       </div>
   </div>
   
+  `
   
-      `
+      
 })
 const button = document.querySelectorAll(".info")
 const div =
@@ -65,18 +67,18 @@ button.forEach(element => {
         const productoId = parseInt(element.id);
         const producto = productos.find(x => x.id === productoId);
 
-        div[producto.id - 1].classList.remove("no-active")
+        div[producto.id - 1].classList.remove("no-active");
     })
 });
 
-const carrito = [
+let carrito = [
     {
         id: 1,
         nombre: "Auricular",
         cantidad: 0,
         precio: 50000,
         total: 0,
-        actualizartotal() {
+        actualizartotal: function(){
             this.total = this.cantidad * this.precio
         },
 
@@ -87,7 +89,7 @@ const carrito = [
         cantidad: 0,
         precio: 20000,
         total: 0,
-        actualizartotal() {
+        actualizartotal: function() {
             this.total = this.cantidad * this.precio
         },
     },
@@ -97,13 +99,12 @@ const carrito = [
         cantidad: 0,
         precio: 80000,
         total: 0,
-        actualizartotal() {
-            this.total = this.cantidad * this.precio
+        actualizartotal:function() {
+            this.total = this.cantidad * this.precio;
         },
 
     }
 ]
-
 const botones = document.querySelectorAll(".btn-primary")
 
 botones.forEach(element => {
@@ -114,8 +115,9 @@ botones.forEach(element => {
         const producto = carrito.find(x => x.id === id)
 
         producto["cantidad"] += 1;
-        producto.actualizartotal()
-        actualizarCarrito()
+        actualizarCarrito();
+        sincronizarStorage(carrito)
+       NuevoTotal();
 
 
     })
@@ -124,16 +126,22 @@ botones.forEach(element => {
 
 )
 function actualizarCarrito() {
+    NuevoTotal();
     const bodyTable = document.getElementById("body-table")
 
+    
+
     bodyTable.innerHTML = ""
+   
 
     carrito.map((x) => {
         if (x.cantidad !== 0) {
+         
 
             bodyTable.innerHTML +=
-
-                `
+            
+`
+                
     <tr>
         <td scope="row" colspan="1">${x.nombre}</td>
         <td  colspan="2" >$ ${x.precio}</td>
@@ -141,14 +149,15 @@ function actualizarCarrito() {
         <td  colspan="2">$ ${x.total}</td>
        <td  colspan="2"> <button  class="btn btn-danger btn-sm delete" id=${x.id}>X</button> </td>
  </tr>
-    
     `
+    
 
         }
     }
 
-    )
+   
 
+    )
 
 
     const botonesEliminar = document.querySelectorAll(".delete");
@@ -158,12 +167,27 @@ function actualizarCarrito() {
             const id = parseInt(element.id);
             const producto = carrito.find(x => x.id === id);
             producto.cantidad -= 1;
-            producto.actualizartotal();
             actualizarCarrito();
+            NuevoTotal();
         });
     });
 
+    sincronizarStorage(carrito)
+ 
+    
+    NuevoTotal();
+  
+
 }
+
+
+
+function sincronizarStorage(articulos){
+    localStorage.setItem("carrito",JSON.stringify(articulos))
+}
+
+
+
 
 const cerrar = document.getElementById("close")
 const table = document.getElementById("table")
@@ -196,10 +220,11 @@ botonesEliminar.forEach(element => {
 
 
         producto.cantidad = -1;
-        producto.actualizartotal();
 
 
         actualizarCarrito();
+        sincronizarStorage(carrito);
+        NuevoTotal();
     });
 });
 
@@ -238,8 +263,10 @@ function mostrarfetch(data){
 
 
                 </div>
+                `
+        
 
-        `
+        
 
         
     }
@@ -247,3 +274,18 @@ function mostrarfetch(data){
 
 }
 
+function NuevoTotal(){
+    carrito.map(x => {
+        x.total=x.cantidad*x.precio
+    })
+
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+    carrito= JSON.parse(localStorage.getItem("carrito") || []);
+    actualizarCarrito();
+    NuevoTotal();
+  
+}
+
+)
