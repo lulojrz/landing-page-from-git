@@ -1,1 +1,1 @@
-Es una pagina que simula una tienda, donde se pueden ver los productos agregarlos, eliminarlos y modificarlos en el carrito. Tambien se pueden ver opiniones de usuarios que simularian clientes anteriores. Y por ultimo se puede completar un formulario de contacto, ya se para cargar un cv o hacer un reclamo.
+Es una pagina que simula una tienda, donde se pueden ver los productos agregarlos, eliminarlos y modificarlos en el carrito. Tambien se pueden ver opiniones de usuarios que simularian clientes anteriores. Y por ultimo se puede completar un formulario de contacto.
